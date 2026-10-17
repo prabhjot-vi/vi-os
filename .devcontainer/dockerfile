@@ -1,0 +1,5 @@
+FROM mcr.microsoft.com/devcontainers/cpp:debian13
+
+RUN apt-get update \
+    && apt-get -y install qemu-system-x86 nasm \
+    && apt-get autoremove -y && apt-get clean -y && rm -rf /var/lib/apt/lists/*
